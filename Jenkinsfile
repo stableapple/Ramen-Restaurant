@@ -5,8 +5,11 @@ pipeline {
         }
     }
 	stages{
-		step('Checkout code'){
-			checkout scm
+		stage('Checkout code'){
+			step{
+				checkout scm
+			}
+			
 		}
 	}
 }
