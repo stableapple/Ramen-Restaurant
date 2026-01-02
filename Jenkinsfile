@@ -14,12 +14,12 @@ pipeline {
 		}
 		stage('Install dependencies'){
 			steps{
-				sh 'npm install'
+				sh 'npm ci'
 			}
 		}
 		stage('Build'){
 			steps{
-				sh 'npm run build'
+				sh 'CI=false npm run build'
 			}
 		}
 	}
